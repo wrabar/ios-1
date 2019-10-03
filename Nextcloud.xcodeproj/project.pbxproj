@@ -446,6 +446,9 @@
 		F7BAADCB1ED5A87C00B7EAD4 /* NCManageDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BAADB51ED5A87C00B7EAD4 /* NCManageDatabase.swift */; };
 		F7BAADCC1ED5A87C00B7EAD4 /* NCManageDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BAADB51ED5A87C00B7EAD4 /* NCManageDatabase.swift */; };
 		F7BF1B431D51E893000854F6 /* CCLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BF1B401D51E893000854F6 /* CCLogin.m */; };
+		F7C3C20423464232007C7ABF /* NCCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C3C20323464232007C7ABF /* NCCommunication.swift */; };
+		F7C3C20623464700007C7ABF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C3C205234646FF007C7ABF /* Alamofire.framework */; };
+		F7C3C20723464701007C7ABF /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7C3C205234646FF007C7ABF /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F7C40BE521998D5B0004137E /* MGSwipeTableCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C40BE421998D5A0004137E /* MGSwipeTableCell.framework */; };
 		F7C40BE721998F410004137E /* DZNEmptyDataSet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C40BE621998F410004137E /* DZNEmptyDataSet.framework */; };
 		F7C40BE9219991A60004137E /* EAIntroView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C40BE8219991A60004137E /* EAIntroView.framework */; };
@@ -634,6 +637,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				F7C3C20723464701007C7ABF /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1183,6 +1187,8 @@
 		F7BFCCC11B68C21900548E76 /* CCManageLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCManageLocation.m; sourceTree = "<group>"; };
 		F7C0F46E1C8880540059EC54 /* ShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ShareViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		F7C0F46F1C8880540059EC54 /* ShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ShareViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		F7C3C20323464232007C7ABF /* NCCommunication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCCommunication.swift; sourceTree = "<group>"; };
+		F7C3C205234646FF007C7ABF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		F7C40BE221998C050004137E /* PDFGenerator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFGenerator.framework; path = Carthage/Build/iOS/PDFGenerator.framework; sourceTree = "<group>"; };
 		F7C40BE421998D5A0004137E /* MGSwipeTableCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MGSwipeTableCell.framework; path = Carthage/Build/iOS/MGSwipeTableCell.framework; sourceTree = "<group>"; };
 		F7C40BE621998F410004137E /* DZNEmptyDataSet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DZNEmptyDataSet.framework; path = Carthage/Build/iOS/DZNEmptyDataSet.framework; sourceTree = "<group>"; };
@@ -1465,6 +1471,7 @@
 				F72E0B9D21AD60BC00898D7B /* WeScan.framework in Frameworks */,
 				F7063DED2199E55F003F38DA /* SVGKit.framework in Frameworks */,
 				F7D4B6892295663D000C2C86 /* nanopb.framework in Frameworks */,
+				F7C3C20623464700007C7ABF /* Alamofire.framework in Frameworks */,
 				F7C40BED219993330004137E /* JDStatusBarNotification.framework in Frameworks */,
 				F7063DEF2199E568003F38DA /* CocoaLumberjack.framework in Frameworks */,
 				F72382C02295856A005B8A07 /* FirebaseMLVisionTextModel.framework in Frameworks */,
@@ -1873,6 +1880,7 @@
 			isa = PBXGroup;
 			children = (
 				F755BD9A20594AC7008C5FBB /* NCService.swift */,
+				F7C3C20323464232007C7ABF /* NCCommunication.swift */,
 				F732BA031D76CE1500E9878B /* CCNetworking.h */,
 				F732BA041D76CE1500E9878B /* CCNetworking.m */,
 				F74D3DBD1BAC1941000BAE4B /* OCNetworking.h */,
@@ -2852,6 +2860,7 @@
 		F7FC7D541DC1F93700BB2C6A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F7C3C205234646FF007C7ABF /* Alamofire.framework */,
 				F74C4FBA2328C3C100A23E25 /* OpenSSL.framework */,
 				F774264022EB3F7300B23912 /* DropDown.framework */,
 				F74AFCE822E8B024003DE61F /* FSCalendar.framework */,
@@ -3311,6 +3320,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/FSCalendar.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/DropDown.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/OpenSSL.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 			);
 			outputPaths = (
 			);
@@ -3659,6 +3669,7 @@
 				F77B0E9B1D118A16002130FE /* CCBKPasscode.m in Sources */,
 				F760F77F21F21F61006B1A73 /* PhotoEditor+Controls.swift in Sources */,
 				F7169A1D1EE590930086BD69 /* NCSharesCell.m in Sources */,
+				F7C3C20423464232007C7ABF /* NCCommunication.swift in Sources */,
 				F77B0EA61D118A16002130FE /* NSString+TruncateToWidth.m in Sources */,
 				F70022C21EC4C9100080073F /* OCNotifications.m in Sources */,
 				F70022BF1EC4C9100080073F /* OCFileDto.m in Sources */,

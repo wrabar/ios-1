@@ -140,7 +140,7 @@ open class TLPhotosPickerViewController: UIViewController {
     
     public weak var delegate: TLPhotosPickerViewControllerDelegate? = nil
     public weak var logDelegate: TLPhotosPickerLogDelegate? = nil
-    public var selectedAssets = [TLPHAsset]()
+    open var selectedAssets = [TLPHAsset]()
     public var configure = TLPhotosPickerConfigure()
     public var customDataSouces: TLPhotopickerDataSourcesProtocol? = nil
     
@@ -222,7 +222,7 @@ open class TLPhotosPickerViewController: UIViewController {
     open override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         if #available(iOS 13.0, *) {
-            let userInterfaceStyle = traitCollection.userInterfaceStyle
+            let userInterfaceStyle = self.traitCollection.userInterfaceStyle
             let image = TLBundle.podBundleImage(named: "pop_arrow")
             if userInterfaceStyle.rawValue == 2 {
                 self.popArrowImageView.image = image?.colorMask(color: .systemBackground)

@@ -31,9 +31,9 @@ extension ActionSheetAppearance {
     }
 }
 
-class NCAppearance: ActionSheetAppearance {
+class NCAppearance: StandardActionSheetAppearance {
 
-    override func applyColors() {
+     override func applyColors() {
       
         ActionSheetTableView.appearance().backgroundColor = NCBrandColor.sharedInstance.backgroundForm
         ActionSheetTableView.appearance().separatorColor = NCBrandColor.sharedInstance.separator

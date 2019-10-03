@@ -1,6 +1,6 @@
 github "tilltue/TLPhotoPicker"
 github "kishikawakatsumi/UICKeyChainStore" == 2.1.2
-github "danielsaidi/Sheeeeeeeeet"
+github "danielsaidi/Sheeeeeeeeet" "2.1.0"
 github "MortimerGoro/MGSwipeTableCell" == 1.6.8
 github "dzenbot/DZNEmptyDataSet" == 1.8.1
 github "ealeksandrov/EAIntroView" == 2.12.0
@@ -17,6 +17,7 @@ github "rechsteiner/Parchment"
 github "WenchaoD/FSCalendar"
 github "AssistoLab/DropDown"
 github "krzyzanowskim/OpenSSL"
+github "Alamofire/Alamofire" "5.0.0-rc.2"
 
 github "https://github.com/marinofaggiana/FastScroll" "master"
 github "https://github.com/marinofaggiana/AFNetworking" "master"
