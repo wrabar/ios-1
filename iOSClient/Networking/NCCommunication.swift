@@ -14,24 +14,22 @@ class NCCommunication: NSObject {
     
     func readFolder(path: String, user: String, password: String) {
         
-        var url: URLConvertible
-        var parameters = Parameters()
-        var headers: HTTPHeaders = [.authorization(username: user, password: password)]
-        
         // URL
+        var url: URLConvertible
         do {
             try url = path.asURL()
         } catch _ {
             return
         }
         
-        // Parameters
-        parameters["x"] = "s"
-        
         // Headers
-        headers["x"] = "X"
-        
-        AF.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: headers, interceptor: nil).validate(statusCode: 200..<300).responseData { (data) in
+        var headers: HTTPHeaders = [.authorization(username: user, password: password)]
+        headers.update(.contentType("application/xml"))
+
+        // Method
+        let method = HTTPMethod(rawValue: "PROPFIND")
+
+        AF.request(url, method: method, parameters: [:], encoding: , headers: headers, interceptor: nil).validate(statusCode: 200..<300).responseData { (data) in
             //
         }
     }
