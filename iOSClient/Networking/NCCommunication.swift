@@ -68,9 +68,9 @@ class NCCommunication: NSObject {
             switch response.result {
             case.failure(let error):
                 print("Board creation failed with error: \(error.localizedDescription)")
-            case .success(let _):
+            case .success( _):
                 print("success")
-            }
+            }            
         }
     }
 }
