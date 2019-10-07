@@ -24,12 +24,6 @@
 import UIKit
 import Sheeeeeeeeet
 
-extension ActionSheetAppearance {
-    
-    static var demoColorful: ActionSheetAppearance {
-        NCAppearance()
-    }
-}
 
 class NCAppearance: StandardActionSheetAppearance {
 
