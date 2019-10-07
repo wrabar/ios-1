@@ -59,18 +59,21 @@ class NCCommunication: NSObject {
         headers.update(name: "Depth", value: "1")
 
         // Parameters
-        let parameters: Parameters = ["":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><d:propfind xmlns:d=\"DAV:\" xmlns:oc=\"http://owncloud.org/ns\" xmlns:nc=\"http://nextcloud.org/ns\"><d:prop>" + NCResource + "</d:prop></d:propfind>"]
+        //let parameters: Parameters = ["":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><d:propfind xmlns:d=\"DAV:\" xmlns:oc=\"http://owncloud.org/ns\" xmlns:nc=\"http://nextcloud.org/ns\"><d:prop>" + NCResource + "</d:prop></d:propfind>"]
         
         // Method
         let method = HTTPMethod(rawValue: "PROPFIND")
         
-        AF.request(url, method: method, parameters:parameters, encoding: URLEncoding.httpBody, headers: headers, interceptor: nil).validate(statusCode: 200..<300).responseData { (response) in
+        AF.request(url, method: method, parameters:[:], encoding: URLEncoding.httpBody, headers: headers, interceptor: nil).validate(statusCode: 200..<300).responseData { (response) in
             switch response.result {
             case.failure(let error):
                 print("Board creation failed with error: \(error.localizedDescription)")
             case .success( _):
+                if let data = response.data {
+                    print("JSON: \(data)")
+                }
                 print("success")
-            }            
+            }
         }
     }
 }
