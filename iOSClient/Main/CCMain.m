@@ -1241,6 +1241,8 @@
 
     [self tableViewReloadData];
     
+    [[NCCommunication sharedInstance] readFolderWithPath:serverUrl user:appDelegate.activeUserID password:appDelegate.activePassword];
+    
     [[OCNetworking sharedManager] readFolderWithAccount:appDelegate.activeAccount serverUrl:serverUrl depth:@"1" completion:^(NSString *account, NSArray *metadatas, tableMetadata *metadataFolder, NSString *message, NSInteger errorCode) {
         
         if (errorCode == 0 && [account isEqualToString:appDelegate.activeAccount]) {
